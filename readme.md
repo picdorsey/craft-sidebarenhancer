@@ -6,3 +6,7 @@ Just like the gear option in previous versions of Craft, Craft Sidebar Enhancer 
 
 ### Installation
 Create a `sidebarenhancer` folder inside `craft/plugins` directory and drop the contents of this repository inside.
+
+### Screenshot
+
+![Screenshot](https://raw.github.com/nicholasodo/craft-sidebarenhancer/master/images/screenshot.png)
