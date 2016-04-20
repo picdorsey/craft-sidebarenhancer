@@ -3,6 +3,7 @@ var sidebarEnhancer = {
     init: function () {
         this.cacheVars();
         this.insertSidebar();
+        this.getActive();
     },
 
     cacheVars: function () {
@@ -30,11 +31,36 @@ var sidebarEnhancer = {
             + '    </ul>'
             + '</div>';
 
+        this.activeClass = 'sel';
+
         this.$globalSidebarNav = document.querySelector('#global-sidebar nav');
+
+        this.$sidebarNavItems = '';
+
+        this.$settingsNavItem = document.querySelector('#nav-settings a');
     },
 
     insertSidebar: function () {
         this.$globalSidebarNav.insertAdjacentHTML('beforeend', this.sidebarString);
+
+        // re-cache element now that it's in the DOM
+        this.$sidebarNavItems = document.querySelectorAll('.system-menu a');
+    },
+
+    getActive: function () {
+        var segments = window.location.pathname.split( '/' );
+        var length = this.$sidebarNavItems.length;
+
+        for (var i = 0; i < length; i++) {
+            var $el = this.$sidebarNavItems[i];
+            var name = $el.textContent.toLowerCase();
+
+            if (segments.indexOf(name) !== -1 && segments.indexOf('settings') !== -1) {
+                $el.classList.add(this.activeClass);
+                this.$settingsNavItem.classList.remove(this.activeClass);
+                break;
+            }
+        }
     }
 };
 
