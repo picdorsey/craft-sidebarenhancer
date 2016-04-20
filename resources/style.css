@@ -1,0 +1,31 @@
+.system-menu {
+    margin-top: 20px;
+}
+
+.system-menu ul {
+    margin-bottom: 20px;
+}
+
+.system-menu ul:last-child {
+    margin-bottom: 0;
+}
+
+.site-name {
+    display: block;
+    padding: 14px;
+
+    color: #fff;
+}
+
+.system-menu ul a {
+    font-size: 13px;
+
+}
+
+.system-menu ul a:before {
+    margin-right: 10px;
+
+    justify-content: center;
+    width: 16px;
+    opacity: 0.5;
+}
