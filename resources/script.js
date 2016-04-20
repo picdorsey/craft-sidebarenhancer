@@ -39,4 +39,4 @@ var sidebarEnhancer = {
 };
 
 // Call the initialize function
-$(sidebarEnhancer.init.bind(sidebarEnhancer));
+sidebarEnhancer.init();
