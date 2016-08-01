@@ -15,6 +15,7 @@ var sidebarEnhancer = {
             + '    <ul>'
             + '        <li><a href="/admin/settings/general" data-icon="general"><span class="label">General</span></a></li>'
             + '        <li><a href="/admin/settings/routes" data-icon="routes"><span class="label">Routes</span></a></li>'
+            + '        <li><a href="/admin/settings/users" data-icon="users"><span class="label">Users</span></a></li>'
             + '        <li><a href="/admin/settings/email" data-icon="mail"><span class="label">Email</span></a></li>'
             + '        <li><a href="/admin/settings/plugins" data-icon="plugin"><span class="label">Plugins</span></a></li>'
             + '    </ul>'
