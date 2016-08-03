@@ -42,7 +42,7 @@ class SidebarEnhancerPlugin extends BasePlugin
     public function init()
     {
         parent::init();
-        if (craft()->request->isCpRequest()) {
+        if (craft()->request->isCpRequest() && craft()->userSession->isAdmin()) {
         	$this->renderCSS();
         	$this->renderJS();
         }
