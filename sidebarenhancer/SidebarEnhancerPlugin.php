@@ -21,7 +21,7 @@ class SidebarEnhancerPlugin extends BasePlugin
 
     public function getVersion()
     {
-        return '1.0.0';
+        return '1.0.3';
     }
 
     public function getReleaseFeedUrl()
@@ -31,7 +31,7 @@ class SidebarEnhancerPlugin extends BasePlugin
 
     public function getSchemaVersion()
     {
-        return '1.0.0';
+        return '1.0.3';
     }
 
     public function getDeveloper()
