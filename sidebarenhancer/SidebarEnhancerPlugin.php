@@ -29,6 +29,11 @@ class SidebarEnhancerPlugin extends BasePlugin
         return 'https://raw.githubusercontent.com/nicholasodo/craft-sidebarenhancer/master/releases.json';
     }
 
+    public function getSchemaVersion()
+    {
+        return '1.0.0';
+    }
+
     public function getDeveloper()
     {
         return 'Nicholas O\'Donnell';
