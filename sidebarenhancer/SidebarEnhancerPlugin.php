@@ -6,12 +6,12 @@ class SidebarEnhancerPlugin extends BasePlugin
 
     public function getName()
     {
-        return 'Craft sidebar enhancer';
+        return 'Sidebar enhancer';
     }
 
     public function getDescription()
     {
-        return 'Adds \'System\' and \'Content\' options to Craft\'s sidebar';
+        return 'Adds \'System\' and \'Content\' options to Craft\'s sidebar.';
     }
 
     public function getDocumentationUrl()
