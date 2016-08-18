@@ -1,10 +1,11 @@
 [
     {
-        "version": "1.0.3",
+        "version": "1.0.4",
         "downloadUrl": "https://github.com/nicholasodo/craft-sproutformsgooglerecaptcha/archive/master.zip",
-        "date": "2016-08-09T16:10:18+00:00",
+        "date": "2016-08-18T14:55:24-04:00",
         "notes": [
-            "[Added] Initial release"
+            "[Improved] Better icon.",
+            "[Improved] General cleanup."
         ]
     }
 ]

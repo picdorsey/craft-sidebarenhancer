@@ -21,17 +21,12 @@ class SidebarEnhancerPlugin extends BasePlugin
 
     public function getVersion()
     {
-        return '1.0.3';
+        return '1.0.4';
     }
 
     public function getReleaseFeedUrl()
     {
         return 'https://raw.githubusercontent.com/nicholasodo/craft-sidebarenhancer/master/releases.json';
-    }
-
-    public function getSchemaVersion()
-    {
-        return '1.0.3';
     }
 
     public function getDeveloper()
@@ -48,17 +43,17 @@ class SidebarEnhancerPlugin extends BasePlugin
     {
         parent::init();
         if (craft()->request->isCpRequest() && craft()->userSession->isAdmin()) {
-            $this->renderCSS();
-            $this->renderJS();
+            $this->_renderCSS();
+            $this->_renderJS();
         }
     }
 
-    private function renderCSS()
+    private function _renderCSS()
     {
         craft()->templates->includeCssFile(UrlHelper::getResourceUrl('sidebarenhancer/style.css'));
     }
 
-    private function renderJS()
+    private function _renderJS()
     {
         craft()->templates->includeJsFile(UrlHelper::getResourceUrl('sidebarenhancer/script.js'));
     }
