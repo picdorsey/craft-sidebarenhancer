@@ -1,4 +1,4 @@
-# Craft Sidebar Enhancer ![Icon](https://raw.github.com/nicholasodo/craft-sidebarenhancer/master/images/icon.png)
+# Craft Sidebar Enhancer   ![Icon](https://raw.github.com/nicholasodo/craft-sidebarenhancer/master/images/icon.png)
 
 With Craft 2.5 came a redesigned control panel. Although pretty, it takes a lot more clicks just to find the setting you're looking for. Not anymore! Craft Sidebar Enhancer adds extended options to Craft's existing sidebar.
 
