@@ -16,7 +16,7 @@ class SidebarEnhancerPlugin extends BasePlugin
 
     public function getDocumentationUrl()
     {
-        return 'https://github.com/picdorsey/craft-sidebarenhancer';
+        return 'https://github.com/picdorsey/craft-sidebarenhancer/blob/master/readme.md';
     }
 
     public function getVersion()
