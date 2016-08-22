@@ -16,7 +16,7 @@ class SidebarEnhancerPlugin extends BasePlugin
 
     public function getDocumentationUrl()
     {
-        return 'https://github.com/nicholasodo/craft-sidebarenhancer';
+        return 'https://github.com/picdorsey/craft-sidebarenhancer';
     }
 
     public function getVersion()
@@ -26,7 +26,7 @@ class SidebarEnhancerPlugin extends BasePlugin
 
     public function getReleaseFeedUrl()
     {
-        return 'https://raw.githubusercontent.com/nicholasodo/craft-sidebarenhancer/master/releases.json';
+        return 'https://raw.githubusercontent.com/picdorsey/craft-sidebarenhancer/master/releases.json';
     }
 
     public function getSchemaVersion()
@@ -36,12 +36,12 @@ class SidebarEnhancerPlugin extends BasePlugin
 
     public function getDeveloper()
     {
-        return 'Nicholas O\'Donnell';
+        return 'Piccirilli Dorsey, Inc.';
     }
 
     public function getDeveloperUrl()
     {
-        return 'https://github.com/nicholasodo';
+        return 'https://github.com/picdorsey';
     }
 
     public function init()
