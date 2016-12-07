@@ -21,7 +21,7 @@ class SidebarEnhancerPlugin extends BasePlugin
 
     public function getVersion()
     {
-        return '1.0.4';
+        return '1.0.5';
     }
 
     public function getReleaseFeedUrl()
@@ -55,12 +55,12 @@ class SidebarEnhancerPlugin extends BasePlugin
 
     private function _renderCSS()
     {
-        craft()->templates->includeCssFile(UrlHelper::getResourceUrl('sidebarenhancer/style.css'));
+        craft()->templates->includeCssFile(UrlHelper::getResourceUrl('sidebarenhancer/sidebarEnhancer_style.css'));
     }
 
     private function _renderJS()
     {
-        craft()->templates->includeJsFile(UrlHelper::getResourceUrl('sidebarenhancer/script.js'));
+        craft()->templates->includeJsFile(UrlHelper::getResourceUrl('sidebarenhancer/sidebarEnhancer_script.js'));
     }
 
 }

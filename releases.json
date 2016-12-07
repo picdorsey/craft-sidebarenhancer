@@ -1,11 +1,10 @@
 [
     {
-        "version": "1.0.4",
+        "version": "1.0.5",
         "downloadUrl": "https://github.com/picdorsey/craft-sidebarenhancer/archive/master.zip",
-        "date": "2016-08-18T14:55:24-04:00",
+        "date": "2016-12-07T11:18:00-04:00",
         "notes": [
-            "[Improved] Better icon.",
-            "[Improved] General cleanup."
+            "[Fixed] Prevent collision with other plugins.",
         ]
     }
 ]
