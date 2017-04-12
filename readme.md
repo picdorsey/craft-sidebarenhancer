@@ -1,8 +1,8 @@
 # Craft Sidebar Enhancer
 
-With Craft 2.5 came a redesigned control panel. Although pretty, it takes a lot more clicks just to find the setting you're looking for. Not anymore! Craft Sidebar Enhancer adds extended options to Craft's existing sidebar.
+With Craft 2.5 came a redesigned control panel. Although pretty, it takes a lot more clicks just to get to the setting you want. Not anymore! Craft Sidebar Enhancer adds extended options to Craft's existing sidebar.
 
-Just like the gear option in previous versions of Craft, Craft Sidebar Enhancer adds both system & general options back to the central navigation - no longer requring an extra step to the 'settings' button.
+Just like the gear option in previous versions of Craft, Craft Sidebar Enhancer adds both system & general options back to the navigation - no longer requiring an extra step to the 'settings' button.
 
 ## Installation
 1. Download & unzip the file and place the `sidebarenhancer` directory into your `craft/plugins` directory
