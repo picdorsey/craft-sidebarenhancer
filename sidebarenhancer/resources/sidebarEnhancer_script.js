@@ -3,12 +3,13 @@ var sidebarEnhancer = {
     init: function () {
         this.cacheVars();
         this.insertSidebar();
+        this.removeUnneededItems();
         this.getActive();
     },
 
     cacheVars: function () {
         this.sidebarString = String()
-            + '<div id="nav" class="system-menu">'
+            + '<div id="nav" class="craft-sidebar-enhancer system-menu">'
             + '    <span class="site-name">'
             + '        <h2>System</h2>'
             + '    </span>'
@@ -46,6 +47,12 @@ var sidebarEnhancer = {
 
         // re-cache element now that it's in the DOM
         this.$sidebarNavItems = document.querySelectorAll('.system-menu a');
+    },
+
+    removeUnneededItems: function () {
+        if (Craft.edition < 2) {
+            document.querySelector('.craft-sidebar-enhancer [href*="settings/users"]').style.display = 'none';
+        }
     },
 
     getActive: function () {

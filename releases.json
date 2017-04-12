@@ -6,5 +6,13 @@
         "notes": [
             "[Fixed] Prevent collision with other plugins.",
         ]
+    },
+    {
+        "version": "1.0.6",
+        "downloadUrl": "https://github.com/picdorsey/craft-sidebarenhancer/archive/master.zip",
+        "date": "2017-04-12T00:00:00-00:00",
+        "notes": [
+            "[Fixed] Only show 'Users' option when Craft Pro is installed (thanks @dennisfrank).",
+        ]
     }
 ]

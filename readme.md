@@ -10,6 +10,5 @@ Just like the gear option in previous versions of Craft, Craft Sidebar Enhancer 
 4. Install plugin in the Craft Control Panel under Settings > Plugins
 5. The plugin folder should be named `sidebarenhancer` for Craft to see it.  GitHub recently started appending `-master` (the branch name) to the name of the folder for zip file downloads.
 
-
 ## Screenshot
 ![Screenshot](https://raw.github.com/picdorsey/craft-sidebarenhancer/master/images/screenshot.png)
