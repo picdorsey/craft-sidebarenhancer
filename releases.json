@@ -14,5 +14,13 @@
         "notes": [
             "[Fixed] Only show 'Users' option when Craft Pro is installed (thanks @dennisfrank).",
         ]
+    },
+    {
+        "version": "1.0.7",
+        "downloadUrl": "https://github.com/picdorsey/craft-sidebarenhancer/archive/master.zip",
+        "date": "2017-04-18T00:00:00-00:00",
+        "notes": [
+            "[Added] Plugin setting to enable the enhanced sidebar for specific admins only.",
+        ]
     }
 ]
