@@ -5,17 +5,10 @@ class SidebarEnhancerService extends BaseApplicationComponent
 {
     public function getAdmins()
     {
-        $admins = [];
-
-        $usersRecord = UserRecord::model()->findAll([
-            'order' => 'id desc'
+        $admins = craft()->elements->getCriteria(ElementType::User, [
+            'admin' => true,
+            'order' => 'id desc',
         ]);
-
-        foreach ($usersRecord as $user) {
-            if ($user && $user->admin) {
-                $admins[] = UserModel::populateModel($user);
-            }
-        }
 
         return $admins;
     }
