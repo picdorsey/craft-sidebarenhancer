@@ -22,5 +22,13 @@
         "notes": [
             "[Added] Plugin setting to enable the enhanced sidebar for specific admins only.",
         ]
+    },
+    {
+        "version": "1.0.8",
+        "downloadUrl": "https://github.com/picdorsey/craft-sidebarenhancer/archive/master.zip",
+        "date": "2017-06-14T00:00:00-00:00",
+        "notes": [
+            "[Fixed] Performance issues when doing admin check (thanks @timkelty).",
+        ]
     }
 ]
