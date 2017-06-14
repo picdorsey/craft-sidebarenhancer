@@ -3,7 +3,6 @@ namespace Craft;
 
 class SidebarEnhancerPlugin extends BasePlugin
 {
-
     public function getName()
     {
         return 'Sidebar enhancer';
@@ -73,14 +72,14 @@ class SidebarEnhancerPlugin extends BasePlugin
         return [
             'enabledFor' => [
                 AttributeType::Mixed,
-                'default' => craft()->sidebarEnhancer->getAdminUsernamesAsArray()
+                'default' => '*'
             ]
         ];
     }
 
     public function getSettingsHtml()
     {
-       return craft()->templates->render('sidebarenhancer/SidebarEnhancer_Settings', [
+        return craft()->templates->render('sidebarenhancer/SidebarEnhancer_Settings', [
            'settings' => $this->getSettings(),
            'admins' => craft()->sidebarEnhancer->getAdmins()
         ]);
