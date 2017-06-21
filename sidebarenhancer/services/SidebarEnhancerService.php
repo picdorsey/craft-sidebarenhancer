@@ -29,7 +29,7 @@ class SidebarEnhancerService extends BaseApplicationComponent
     {
         $user = craft()->userSession->getUser();
         $enabledFor = craft()->plugins->getPlugin('sidebarEnhancer')->getSettings()->enabledFor;
-        $isEnabled = $enabledFor === '*' || is_array($enabledFor) && in_array($user->username, $enabledFor);
+        $isEnabled = $enabledFor === '*' || (is_array($enabledFor) && $user && in_array($user->username, $enabledFor));
 
         return craft()->request->isCpRequest()
             && $user

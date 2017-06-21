@@ -30,5 +30,13 @@
         "notes": [
             "[Fixed] Performance issues when doing admin check (thanks @timkelty).",
         ]
+    },
+    {
+        "version": "1.0.9",
+        "downloadUrl": "https://github.com/picdorsey/craft-sidebarenhancer/archive/master.zip",
+        "date": "2017-06-21T00:00:00-00:00",
+        "notes": [
+            "[Fixed] Fix non-object error when not logged in (thanks @edolyne).",
+        ]
     }
 ]
