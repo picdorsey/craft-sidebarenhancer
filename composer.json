@@ -24,6 +24,7 @@
     "extra":
     {
         "handle": "sidebarEnhancer",
+        "class": "SidebarEnhancerPlugin",
         "name": "Sidebar enhancer",
         "developer": "Piccirilli Dorsey, Inc.",
         "developerUrl": "https://github.com/picdorsey",
