@@ -5,7 +5,7 @@ class SidebarEnhancerService extends BaseApplicationComponent
 {
     public function getAdmins()
     {
-        $admins = craft()->elements->getCriteria(ElementType::User, [
+        $admins = Craft::$app->elements->getCriteria(ElementType::User, [
             'admin' => true,
             'order' => 'id desc',
         ]);
@@ -27,11 +27,11 @@ class SidebarEnhancerService extends BaseApplicationComponent
 
     public function shouldShowEnhancedSidebar()
     {
-        $user = craft()->userSession->getUser();
-        $enabledFor = craft()->plugins->getPlugin('sidebarEnhancer')->getSettings()->enabledFor;
+        $user = Craft::$app->userSession->getUser();
+        $enabledFor = Craft::$app->plugins->getPlugin('sidebarEnhancer')->getSettings()->enabledFor;
         $isEnabled = $enabledFor === '*' || (is_array($enabledFor) && $user && in_array($user->username, $enabledFor));
 
-        return craft()->request->isCpRequest()
+        return Craft::$app->request->isCpRequest()
             && $user
             && $user->admin
             && $isEnabled;

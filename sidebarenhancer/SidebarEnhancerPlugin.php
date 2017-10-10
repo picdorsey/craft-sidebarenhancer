@@ -20,7 +20,7 @@ class SidebarEnhancerPlugin extends BasePlugin
 
     public function getVersion()
     {
-        return '1.0.9';
+        return '1.1.0';
     }
 
     public function getReleaseFeedUrl()
@@ -46,7 +46,7 @@ class SidebarEnhancerPlugin extends BasePlugin
     public function init()
     {
         parent::init();
-        if (craft()->sidebarEnhancer->shouldShowEnhancedSidebar()) {
+        if (Craft::$app->sidebarEnhancer->shouldShowEnhancedSidebar()) {
             $this->_renderCSS();
             $this->_renderJS();
         }
@@ -54,12 +54,12 @@ class SidebarEnhancerPlugin extends BasePlugin
 
     private function _renderCSS()
     {
-        craft()->templates->includeCssFile(UrlHelper::getResourceUrl('sidebarenhancer/sidebarEnhancer_style.css'));
+        Craft::$app->templates->includeCssFile(UrlHelper::getResourceUrl('sidebarenhancer/sidebarEnhancer_style.css'));
     }
 
     private function _renderJS()
     {
-        craft()->templates->includeJsFile(UrlHelper::getResourceUrl('sidebarenhancer/sidebarEnhancer_script.js'));
+        Craft::$app->templates->includeJsFile(UrlHelper::getResourceUrl('sidebarenhancer/sidebarEnhancer_script.js'));
     }
 
     public function hasCpSection()
@@ -79,9 +79,9 @@ class SidebarEnhancerPlugin extends BasePlugin
 
     public function getSettingsHtml()
     {
-        return craft()->templates->render('sidebarenhancer/SidebarEnhancer_Settings', [
+        return Craft::$app->templates->render('sidebarenhancer/SidebarEnhancer_Settings', [
            'settings' => $this->getSettings(),
-           'admins' => craft()->sidebarEnhancer->getAdmins()
+           'admins' => Craft::$app->sidebarEnhancer->getAdmins()
         ]);
     }
 }
