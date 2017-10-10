@@ -54,12 +54,12 @@ class SidebarEnhancerPlugin extends BasePlugin
 
     private function _renderCSS()
     {
-        Craft::$app->templates->includeCssFile(UrlHelper::getResourceUrl('sidebarenhancer/sidebarEnhancer_style.css'));
+        Craft::$app->view->includeCssFile(UrlHelper::getResourceUrl('sidebarenhancer/sidebarEnhancer_style.css'));
     }
 
     private function _renderJS()
     {
-        Craft::$app->templates->includeJsFile(UrlHelper::getResourceUrl('sidebarenhancer/sidebarEnhancer_script.js'));
+        Craft::$app->view->includeJsFile(UrlHelper::getResourceUrl('sidebarenhancer/sidebarEnhancer_script.js'));
     }
 
     public function hasCpSection()
@@ -79,7 +79,7 @@ class SidebarEnhancerPlugin extends BasePlugin
 
     public function getSettingsHtml()
     {
-        return Craft::$app->templates->render('sidebarenhancer/SidebarEnhancer_Settings', [
+        return Craft::$app->view->render('sidebarenhancer/SidebarEnhancer_Settings', [
            'settings' => $this->getSettings(),
            'admins' => Craft::$app->sidebarEnhancer->getAdmins()
         ]);

@@ -27,7 +27,7 @@ class SidebarEnhancerService extends BaseApplicationComponent
 
     public function shouldShowEnhancedSidebar()
     {
-        $user = Craft::$app->userSession->getUser();
+        $user = Craft::$app->user->getUser();
         $enabledFor = Craft::$app->plugins->getPlugin('sidebarEnhancer')->getSettings()->enabledFor;
         $isEnabled = $enabledFor === '*' || (is_array($enabledFor) && $user && in_array($user->username, $enabledFor));
 
