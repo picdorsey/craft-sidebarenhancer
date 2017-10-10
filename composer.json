@@ -24,7 +24,7 @@
     },
     "extra":
     {
-        "handle": "sidebarEnhancer",
+        "handle": "sidebar-enhancer",
         "class": "SidebarEnhancerPlugin",
         "basePath": "@picdorsey/sidebarenhancer",
         "name": "Sidebar enhancer",
