@@ -3,7 +3,7 @@
     "description": "Craft plugin that adds extended options to Craft's sidebar.",
     "type": "craft-plugin",
     "license": "MIT",
-    "minimum-stability": "dev",
+    "minimum-stability": "beta",
     "version": "1.1.0",
     "support":
     {
