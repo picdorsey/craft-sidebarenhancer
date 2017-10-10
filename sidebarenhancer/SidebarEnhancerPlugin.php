@@ -79,7 +79,7 @@ class SidebarEnhancerPlugin extends BasePlugin
 
     public function getSettingsHtml()
     {
-        return Craft::$app->view->render('sidebarenhancer/SidebarEnhancer_Settings', [
+        return Craft::$app->view->renderTemplate('sidebar-enhancer/SidebarEnhancer_Settings', [
            'settings' => $this->getSettings(),
            'admins' => Craft::$app->sidebarEnhancer->getAdmins()
         ]);
