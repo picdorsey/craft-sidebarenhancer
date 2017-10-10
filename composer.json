@@ -26,6 +26,7 @@
     {
         "handle": "sidebarEnhancer",
         "class": "SidebarEnhancerPlugin",
+        "basePath": "@picdorsey/sidebarenhancer",
         "name": "Sidebar enhancer",
         "developer": "Piccirilli Dorsey, Inc.",
         "developerUrl": "https://github.com/picdorsey",
