@@ -19,7 +19,7 @@
     {
         "psr-4":
         {
-            "picdorsey-sidebarenhancer\\": "sidebarenchancer/"
+            "picdorsey-sidebarenhancer\\": "sidebarenhancer/"
         }
     },
     "extra":
