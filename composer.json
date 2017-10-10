@@ -19,7 +19,12 @@
     {
         "psr-4":
         {
-            "picdorsey\\craft-sidebarenhancer\\": "sidebarenchancer/"
+            // When autoloading a class like Foo\\Bar\\Baz
+            // a namespace prefix Foo\\ pointing to a directory src/
+            // means that the autoloader will look
+            // for a file named src/Bar/Baz.php
+
+            "picdorsey-sidebarenhancer\\": "sidebarenchancer/"
         }
     },
     "extra":
