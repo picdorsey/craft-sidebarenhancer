@@ -1,6 +1,8 @@
 <?php
 namespace picdorsey\sidebarenhancer;
 
+use \picdorsey\sidebarenhancer\services\Visibility;
+
 class Plugin extends \craft\base\Plugin
 {
     public function getName()
@@ -49,7 +51,7 @@ class Plugin extends \craft\base\Plugin
 
         // https://github.com/craftcms/docs/blob/master/en/services.md
         $this->setComponents([
-            'visibility' => \picdorsey\sidebarenhancer\services\Visibility::class,
+            'visibility' => Visibility::class,
         ]);
 
         if ($this->visibility->shouldShowEnhancedSidebar()) {

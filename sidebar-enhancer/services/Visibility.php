@@ -2,17 +2,13 @@
 namespace picdorsey\sidebarenhancer\services;
 
 use yii\base\Component;
+use \craft\elements\User;
 
 class Visibility extends Component
 {
     public function getAdmins()
     {
-        $admins = \Craft::$app->elements->getCriteria(ElementType::User, [
-            'admin' => true,
-            'order' => 'id desc',
-        ]);
-
-        return $admins;
+        return User::find().where('admin' => true).select(['id','username']).orderBy('id desc');
     }
 
     public function getAdminUsernamesAsArray()
@@ -29,11 +25,11 @@ class Visibility extends Component
 
     public function shouldShowEnhancedSidebar()
     {
-        $user = \Craft::$app->user->getUser();
-        $enabledFor = \Craft::$app->plugins->getPlugin('sidebarEnhancer')->getSettings()->enabledFor;
+        $user = \Craft::$app->getUser();
+        $enabledFor = \Craft::$app->getPlugins()->getPlugin('sidebarEnhancer')->getSettings()->enabledFor;
         $isEnabled = $enabledFor === '*' || (is_array($enabledFor) && $user && in_array($user->username, $enabledFor));
 
-        return \Craft::$app->request->isCpRequest()
+        return \Craft::$app->getRequest()->getIsCpRequest()
             && $user
             && $user->admin
             && $isEnabled;
