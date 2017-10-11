@@ -1,7 +1,7 @@
 <?php
 namespace Craft;
 
-class SidebarEnhancerPlugin extends BasePlugin
+class SidebarEnhancerPlugin extends \craft\base\Plugin
 {
     public function getName()
     {
