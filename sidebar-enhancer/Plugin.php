@@ -46,7 +46,13 @@ class Plugin extends \craft\base\Plugin
     public function init()
     {
         parent::init();
-        if (\Craft::$app->sidebarEnhancer_settings->shouldShowEnhancedSidebar()) {
+
+        // https://github.com/craftcms/docs/blob/master/en/services.md
+        $this->setComponents([
+            'visibility' => \picdorsey\sidebarenhancer\services\Visibility::class,
+        ])
+
+        if (\$this->visibility->shouldShowEnhancedSidebar()) {
             $this->_renderCSS();
             $this->_renderJS();
         }
@@ -85,7 +91,7 @@ class Plugin extends \craft\base\Plugin
     {
         return \Craft::$app->view->renderTemplate('sidebar-enhancer/SidebarEnhancer_Settings', [
            'settings' => $this->getSettings(),
-           'admins' => \Craft::$app->sidebarEnhancer->getAdmins()
+           'admins' => $this->visibility->getAdmins()
         ]);
     }
 }

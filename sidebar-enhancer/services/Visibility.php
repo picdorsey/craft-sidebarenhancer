@@ -1,7 +1,9 @@
 <?php
-namespace picdorsey\sidebarenhancer;
+namespace picdorsey\sidebarenhancer\services;
 
-class SettingsService extends \craft\base\ApplicationComponent
+use yii\base\Component;
+
+class Visibility extends Component
 {
     public function getAdmins()
     {
