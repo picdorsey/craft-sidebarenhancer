@@ -3,6 +3,7 @@ namespace picdorsey\sidebarenhancer\services;
 
 use yii\base\Component;
 use \craft\elements\User;
+use \picdorsey\sidebarenhancer\Plugin;
 
 class Visibility extends Component
 {
@@ -26,7 +27,7 @@ class Visibility extends Component
     public function shouldShowEnhancedSidebar()
     {
         $user = \Craft::$app->getUser();
-        $enabledFor = \Craft::$app->getPlugins()->getPlugin('sidebarEnhancer')->getSettings()->enabledFor;
+        $enabledFor = Plugin::getInstance()->settings->enabledFor;
         $isEnabled = $enabledFor === '*' || (is_array($enabledFor) && $user && in_array($user->username, $enabledFor));
 
         return \Craft::$app->getRequest()->getIsCpRequest()
