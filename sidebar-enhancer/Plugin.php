@@ -52,7 +52,7 @@ class Plugin extends \craft\base\Plugin
             'visibility' => \picdorsey\sidebarenhancer\services\Visibility::class,
         ])
 
-        if (\$this->visibility->shouldShowEnhancedSidebar()) {
+        if ($this->visibility->shouldShowEnhancedSidebar()) {
             $this->_renderCSS();
             $this->_renderJS();
         }
