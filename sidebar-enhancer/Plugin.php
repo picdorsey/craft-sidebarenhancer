@@ -46,7 +46,7 @@ class Plugin extends \craft\base\Plugin
     public function init()
     {
         parent::init();
-        if (Craft::$app->sidebarEnhancer->shouldShowEnhancedSidebar()) {
+        if (\Craft::$app->sidebarEnhancer->shouldShowEnhancedSidebar()) {
             $this->_renderCSS();
             $this->_renderJS();
         }
@@ -56,14 +56,14 @@ class Plugin extends \craft\base\Plugin
     {
         // see https://github.com/craftcms/docs/blob/master/en/asset-bundles.md#getting-published-file-urls
         // for explanation on usage of \Craft::$app->assetManager->getPublishedUrl
-        Craft::$app->view->includeCssFile( \Craft::$app->assetManager->getPublishedUrl('@picdorsey-sidebarenhancer/resources', true).'/sidebarEnhancer_style.css' );
+        \Craft::$app->view->includeCssFile( \Craft::$app->assetManager->getPublishedUrl('@picdorsey-sidebarenhancer/resources', true).'/sidebarEnhancer_style.css' );
     }
 
     private function _renderJS()
     {
         // see https://github.com/craftcms/docs/blob/master/en/asset-bundles.md#getting-published-file-urls
         // for explanation on usage of \Craft::$app->assetManager->getPublishedUrl
-        Craft::$app->view->includeJsFile( \Craft::$app->assetManager->getPublishedUrl('@picdorsey-sidebarenhancer/resources', true).'/sidebarEnhancer_script.js' );
+        \Craft::$app->view->includeJsFile( \Craft::$app->assetManager->getPublishedUrl('@picdorsey-sidebarenhancer/resources', true).'/sidebarEnhancer_script.js' );
     }
 
     public function hasCpSection()
@@ -83,9 +83,9 @@ class Plugin extends \craft\base\Plugin
 
     public function getSettingsHtml()
     {
-        return Craft::$app->view->renderTemplate('sidebar-enhancer/SidebarEnhancer_Settings', [
+        return \Craft::$app->view->renderTemplate('sidebar-enhancer/SidebarEnhancer_Settings', [
            'settings' => $this->getSettings(),
-           'admins' => Craft::$app->sidebarEnhancer->getAdmins()
+           'admins' => \Craft::$app->sidebarEnhancer->getAdmins()
         ]);
     }
 }
