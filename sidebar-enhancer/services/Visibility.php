@@ -8,7 +8,7 @@ class Visibility extends Component
 {
     public function getAdmins()
     {
-        return User::find().where('admin' => true).select(['id','username']).orderBy('id desc');
+        return User::find().where(['admin' => true]).select(['id','username']).orderBy('id desc');
     }
 
     public function getAdminUsernamesAsArray()
