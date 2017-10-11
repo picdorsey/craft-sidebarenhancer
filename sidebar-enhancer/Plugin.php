@@ -1,5 +1,5 @@
 <?php
-namespace ns\prefix;
+namespace picdorsey\sidebarenhancer;
 
 class SidebarEnhancerPlugin extends \craft\base\Plugin
 {

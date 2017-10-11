@@ -19,14 +19,12 @@
     {
         "psr-4":
         {
-            "picdorsey-sidebarenhancer\\": "sidebarenhancer/"
+            "picdorsey\\sidebarenhancer\\": "sidebar-enhancer/"
         }
     },
     "extra":
     {
-        "handle": "sidebar-enhancer-plugin",
-        "class": "SidebarEnhancerPlugin",
-        "basePath": "sidebarenhancer",
+        "handle": "sidebar-enhancer",
         "name": "Sidebar enhancer",
         "developer": "Piccirilli Dorsey, Inc.",
         "developerUrl": "https://github.com/picdorsey",
