@@ -50,7 +50,7 @@ class Plugin extends \craft\base\Plugin
         // https://github.com/craftcms/docs/blob/master/en/services.md
         $this->setComponents([
             'visibility' => \picdorsey\sidebarenhancer\services\Visibility::class,
-        ])
+        ]);
 
         if ($this->visibility->shouldShowEnhancedSidebar()) {
             $this->_renderCSS();
