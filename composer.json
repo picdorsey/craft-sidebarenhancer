@@ -24,7 +24,7 @@
     },
     "extra":
     {
-        "handle": "sidebar-enhancer",
+        "handle": "sidebar-enhancer-plugin",
         "class": "SidebarEnhancerPlugin",
         "basePath": "sidebarenhancer",
         "name": "Sidebar enhancer",
