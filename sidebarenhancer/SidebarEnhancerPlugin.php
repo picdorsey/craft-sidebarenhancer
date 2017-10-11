@@ -1,6 +1,8 @@
 <?php
 namespace Craft;
 
+
+
 class SidebarEnhancerPlugin extends BasePlugin
 {
     public function getName()
@@ -52,14 +54,20 @@ class SidebarEnhancerPlugin extends BasePlugin
         }
     }
 
+
+
     private function _renderCSS()
     {
-        Craft::$app->view->includeCssFile(UrlHelper::getResourceUrl('sidebarenhancer/sidebarEnhancer_style.css'));
+        // see https://github.com/craftcms/docs/blob/master/en/asset-bundles.md#getting-published-file-urls
+        // for explanation on usage of \Craft::$app->assetManager->getPublishedUrl
+        Craft::$app->view->includeCssFile( \Craft::$app->assetManager->getPublishedUrl('@picdorsey-sidebarenhancer/resources', true).'/sidebarEnhancer_style.css' );
     }
 
     private function _renderJS()
     {
-        Craft::$app->view->includeJsFile(UrlHelper::getResourceUrl('sidebarenhancer/sidebarEnhancer_script.js'));
+        // see https://github.com/craftcms/docs/blob/master/en/asset-bundles.md#getting-published-file-urls
+        // for explanation on usage of \Craft::$app->assetManager->getPublishedUrl
+        Craft::$app->view->includeJsFile( \Craft::$app->assetManager->getPublishedUrl('@picdorsey-sidebarenhancer/resources', true).'/sidebarEnhancer_script.js' );
     }
 
     public function hasCpSection()
