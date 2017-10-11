@@ -1,7 +1,7 @@
 <?php
-namespace Craft;
+namespace picdorsey\sidebarenhancer;
 
-class SidebarEnhancerPlugin extends \craft\base\Plugin
+class Plugin extends \craft\base\Plugin
 {
     public function getName()
     {
