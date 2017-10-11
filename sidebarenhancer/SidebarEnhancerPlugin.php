@@ -1,8 +1,6 @@
 <?php
 namespace Craft;
 
-
-
 class SidebarEnhancerPlugin extends BasePlugin
 {
     public function getName()
@@ -53,8 +51,6 @@ class SidebarEnhancerPlugin extends BasePlugin
             $this->_renderJS();
         }
     }
-
-
 
     private function _renderCSS()
     {
