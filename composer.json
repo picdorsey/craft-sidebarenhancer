@@ -29,6 +29,7 @@
         "developer": "Piccirilli Dorsey, Inc.",
         "developerUrl": "https://github.com/picdorsey",
         "changelogUrl": "https://github.com/picdorsey/craft-sidebarenhancer/commits/master",
-        "downloadUrl": "https://github.com/picdorsey/craft-sidebarenhancer/archive/master.zip"
+        "downloadUrl": "https://github.com/picdorsey/craft-sidebarenhancer/archive/master.zip",
+        "class": "picdorsey\\sidebarenhancer\\Plugin"
     }
 }
