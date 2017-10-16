@@ -26,8 +26,8 @@ class Visibility extends Component
     public function shouldShowEnhancedSidebar()
     {
         $user = \Craft::$app->getUser();
-        $enabledFor = \Craft::$app->getPlugins()->getPlugin('Sidebar Enhancer')->getSettings()->enabledFor;
-        $isEnabled = $enabledFor === '*' || (is_array($enabledFor) && $user && in_array($user->username, $enabledFor));
+        // $enabledFor = \Craft::$app->getPlugins()->getPlugin('sidebar-enhancer')->getSettings()->enabledFor;
+        $isEnabled = true; //$enabledFor === '*' || (is_array($enabledFor) && $user && in_array($user->username, $enabledFor));
 
         return \Craft::$app->getRequest()->getIsCpRequest()
             && $user
