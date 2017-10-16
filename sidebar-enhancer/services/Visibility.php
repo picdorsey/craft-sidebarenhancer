@@ -31,7 +31,7 @@ class Visibility extends Component
 
         return \Craft::$app->getRequest()->getIsCpRequest()
             && $user
-            && $user->getIdentity()->getIsAdmin()
+            && $user->getIdentity()->admin
             && $isEnabled;
     }
 }
