@@ -24,8 +24,8 @@
     },
     "extra":
     {
+        "name": "Sidebar Enhancer",
         "handle": "sidebar-enhancer",
-        "name": "Sidebar enhancer",
         "developer": "Piccirilli Dorsey, Inc.",
         "developerUrl": "https://github.com/picdorsey",
         "changelogUrl": "https://github.com/picdorsey/craft-sidebarenhancer/commits/master",

@@ -1,1 +1,24 @@
-{"pluginName":"Sidebar Enhancer","pluginDescription":"Enhances the menu structure in the Craft CMS Control Panel","pluginVersion":"1.1.0","pluginAuthorName":"Piccirilli Dorsey, Inc.","pluginVendorName":"Piccirilli Dorsey, Inc.","pluginAuthorUrl":"https://github.com/picdorsey","pluginAuthorGithub":"Piccirilli Dorsey","codeComments":"","pluginComponents":["resources","templates","services"],"consolecommandName":"","controllerName":"","cpsectionName":"sidebar-enhancer","elementName":"","fieldName":"","modelName":"","purchasableName":"","recordName":"","serviceName":"Visibility","taskName":"","utilityName":"","widgetName":"","apiVersion":"api_version_3_0"}
+{
+    "pluginName": "Sidebar Enhancer",
+    "pluginDescription": "Enhances the menu structure in the Craft CMS Control Panel",
+    "pluginVersion": "1.1.0",
+    "pluginAuthorName": "Piccirilli Dorsey, Inc.",
+    "pluginVendorName": "Piccirilli Dorsey, Inc.",
+    "pluginAuthorUrl": "https://github.com/picdorsey",
+    "pluginAuthorGithub": "Piccirilli Dorsey",
+    "codeComments": "",
+    "pluginComponents": ["resources", "templates", "services"],
+    "consolecommandName": "",
+    "controllerName": "",
+    "cpsectionName": "sidebar-enhancer",
+    "elementName": "",
+    "fieldName": "",
+    "modelName": "",
+    "purchasableName": "",
+    "recordName": "",
+    "serviceName": "Visibility",
+    "taskName": "",
+    "utilityName": "",
+    "widgetName": "",
+    "apiVersion": "api_version_3_0"
+}
