@@ -7,7 +7,7 @@ class Plugin extends \craft\base\Plugin
 {
     public function getName()
     {
-        return 'Sidebar enhancer';
+        return 'Sidebar Enhancer';
     }
 
     public function getDescription()
