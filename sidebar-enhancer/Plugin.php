@@ -1,11 +1,13 @@
 <?php
-namespace Craft;
+namespace picdorsey\sidebarenhancer;
 
-class SidebarEnhancerPlugin extends BasePlugin
+use \picdorsey\sidebarenhancer\services\Visibility;
+
+class Plugin extends \craft\base\Plugin
 {
     public function getName()
     {
-        return 'Sidebar enhancer';
+        return 'Sidebar Enhancer';
     }
 
     public function getDescription()
@@ -20,7 +22,7 @@ class SidebarEnhancerPlugin extends BasePlugin
 
     public function getVersion()
     {
-        return '1.0.9';
+        return '1.1.0';
     }
 
     public function getReleaseFeedUrl()
@@ -46,7 +48,13 @@ class SidebarEnhancerPlugin extends BasePlugin
     public function init()
     {
         parent::init();
-        if (craft()->sidebarEnhancer->shouldShowEnhancedSidebar()) {
+
+        // https://github.com/craftcms/docs/blob/master/en/services.md
+        $this->setComponents([
+            'visibility' => Visibility::class,
+        ]);
+
+        if ($this->visibility->shouldShowEnhancedSidebar()) {
             $this->_renderCSS();
             $this->_renderJS();
         }
@@ -54,12 +62,16 @@ class SidebarEnhancerPlugin extends BasePlugin
 
     private function _renderCSS()
     {
-        craft()->templates->includeCssFile(UrlHelper::getResourceUrl('sidebarenhancer/sidebarEnhancer_style.css'));
+        // see https://github.com/craftcms/docs/blob/master/en/asset-bundles.md#getting-published-file-urls
+        // for explanation on usage of \Craft::$app->assetManager->getPublishedUrl
+        \Craft::$app->view->includeCssFile( \Craft::$app->assetManager->getPublishedUrl('@picdorsey/sidebar-enhancer/resources', true).'/sidebarEnhancer_style.css' );
     }
 
     private function _renderJS()
     {
-        craft()->templates->includeJsFile(UrlHelper::getResourceUrl('sidebarenhancer/sidebarEnhancer_script.js'));
+        // see https://github.com/craftcms/docs/blob/master/en/asset-bundles.md#getting-published-file-urls
+        // for explanation on usage of \Craft::$app->assetManager->getPublishedUrl
+        \Craft::$app->view->includeJsFile( \Craft::$app->assetManager->getPublishedUrl('@picdorsey/sidebar-enhancer/resources', true).'/sidebarEnhancer_script.js' );
     }
 
     public function hasCpSection()
@@ -79,9 +91,9 @@ class SidebarEnhancerPlugin extends BasePlugin
 
     public function getSettingsHtml()
     {
-        return craft()->templates->render('sidebarenhancer/SidebarEnhancer_Settings', [
+        return \Craft::$app->view->renderTemplate('sidebar-enhancer/SidebarEnhancer_Settings', [
            'settings' => $this->getSettings(),
-           'admins' => craft()->sidebarEnhancer->getAdmins()
+           'admins' => $this->visibility->getAdmins()
         ]);
     }
 }

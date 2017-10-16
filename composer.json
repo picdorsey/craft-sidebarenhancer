@@ -1,0 +1,35 @@
+{
+    "name": "picdorsey/craft-sidebarenhancer",
+    "description": "Craft plugin that adds extended options to Craft's sidebar.",
+    "type": "craft-plugin",
+    "license": "MIT",
+    "minimum-stability": "beta",
+    "version": "1.1.0",
+    "support":
+    {
+        "docs": "https://github.com/picdorsey/craft-sidebarenhancer/blob/master/readme.md",
+        "issues": "https://github.com/picdorsey/craft-sidebarenhancer/issues"
+
+    },
+    "require":
+    {
+        "craftcms/cms": "^3.0.0-beta.29"
+    },
+    "autoload":
+    {
+        "psr-4":
+        {
+            "picdorsey\\sidebarenhancer\\": "sidebar-enhancer/"
+        }
+    },
+    "extra":
+    {
+        "name": "Sidebar Enhancer",
+        "handle": "sidebar-enhancer",
+        "developer": "Piccirilli Dorsey, Inc.",
+        "developerUrl": "https://github.com/picdorsey",
+        "changelogUrl": "https://github.com/picdorsey/craft-sidebarenhancer/commits/master",
+        "downloadUrl": "https://github.com/picdorsey/craft-sidebarenhancer/archive/master.zip",
+        "class": "picdorsey\\sidebarenhancer\\Plugin"
+    }
+}
